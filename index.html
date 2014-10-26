@@ -28,14 +28,14 @@
       header{border-bottom:1px dotted #ccc;text-align: center;color:#222;}
       .clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
       .clearfix { *zoom:1; }
-      ul {list-style:none;padding:40px 0 20px 0;margin:0 auto;width:400px;}
-      li{width:120px;height:120px;border-radius:60px;background:#fff;float:left;margin-right:20px;/*border:1px solid #eee;box-shadow:2px 1px 1px #eee;*/text-align: center;color:#ff3399;}
-      li:hover{cursor:pointer;}
+      ul {list-style:none;padding:40px 0 20px 0;margin:0 auto;text-align: center;}
+      li{width:120px;height:120px;border-radius:60px;background:#fff;display:inline-block;margin-right:20px;position: relative;text-align: center;color:#ff3399;transition:1s;}
+      li:hover{cursor:pointer;transform:translate(0,-10px);-webkit-transform:translate(0,-10px);}
       li a{display:block;width:100%;height:100%;}
       li:first-child{background: url("img/github.png") no-repeat center center;background-size:80%;}
       li:nth-child(2){background: url("img/iruxu.png") no-repeat center center;background-size:80%;}
       li:last-child{background: url("img/notebook.png") no-repeat center center;background-size:80%;margin-right:0px;}
-      span{color:#777;display:none;position:relative;top:-10px;}
+      span{color:#777;text-align:center;width:100%;display:none;position: absolute;top:110px;}
       footer{text-transform:uppercase;text-align: center;color:#888;/*border-top:1px solid #ccc;border-bottom:1px solid #ccc;*/width:268px;margin:10px auto;}
       #show,#list{border:1px solid #ccc;background: #fff;padding:10px;width:88%;margin:0 auto;border-radius:4px;box-shadow:0px 0px 1px #ccc;}
       #show a,#list a{color:#369;transition:0.5s;}
@@ -52,10 +52,10 @@
     $(function(){
       $("li").hover(
         function(){
-          $(this).children('span').fadeIn();
+          $(this).children('span').fadeIn().css('display','block');
         },
         function(){
-          $(this).children('span').fadeOut();
+          $(this).children('span').fadeOut().css('display','block');
         }
       );
 
