@@ -6,6 +6,8 @@
     <meta name="description" content="Iruxu.github.io : ">
     <base target="_blank">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <title>iRuxu.com - Github</title>
     <style>
@@ -45,28 +47,27 @@
         .box{width:100%;margin-top:60px;}
         li{width:100px;margin-right:2px;}
       }
-
     </style>
     <script>
-    $(function(){
-      $("li").hover(
-        function(){
-          $(this).children('p').fadeIn();
-        },
-        function(){
-          $(this).children('p').fadeOut();
-        }
-      );
+      $(function(){
+        $("li").hover(
+          function(){
+            $(this).children('p').fadeIn();
+          },
+          function(){
+            $(this).children('p').fadeOut();
+          }
+        );
 
-      $("#tg_show").click(function(e){
-          $("#show").slideToggle(500);
-          e.preventDefault();
-      })
+        $("#tg_show").click(function(e){
+            $("#show").slideToggle(500);
+            e.preventDefault();
+        })
 
-      $("#logo").click(function(e){
-          e.preventDefault();
+        $("#logo").click(function(e){
+            e.preventDefault();
+        })
       })
-    })
     </script>
   </head>
 
