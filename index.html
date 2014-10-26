@@ -1,46 +1,99 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Iruxu.github.io : ">
-    <base target="_blank" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-
+    <base target="_blank">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <title>iRuxu.com - Github</title>
+    <style>
+      @font-face{
+        font-family: 'Nikefont';
+          src: url('img/Nike_Total_90.ttf') format('truetype'); 
+      }
+      header{
+        font-family:"Nikefont";
+        font-size:100px;
+        line-height:120px;
+        font-style:normal;
+        -webkit-font-smoothing: antialiased; 
+        -webkit-text-stroke-width: 0.2px;
+      }
+      html,body{padding:0;margin:0;font-family:consolas;font-size:12px;background:#f1f1f1;}
+      .box{margin:200px auto 0 auto;width:600px;/*height:400px;position:absolute;top:calc(50% - 200px);left:calc(50% - 300px);*/}
+      *{outline:0;}
+      a{color:#000;text-decoration: none;}
+      header{border-bottom:1px dotted #ccc;text-align: center;color:#222;}
+      .clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+      .clearfix { *zoom:1; }
+      ul {list-style:none;padding:40px 0 20px 0;margin:0 auto;width:400px;}
+      li{width:120px;height:120px;border-radius:60px;background:#fff;float:left;margin-right:20px;/*border:1px solid #eee;box-shadow:2px 1px 1px #eee;*/text-align: center;color:#ff3399;}
+      li:hover{cursor:pointer;}
+      li a{display:block;width:100%;height:100%;}
+      li:first-child{background: url("img/github.png") no-repeat center center;background-size:80%;}
+      li:nth-child(2){background: url("img/tools.png") no-repeat center center;background-size:80%;}
+      li:last-child{background: url("img/iruxu.png") no-repeat center center;background-size:80%;margin-right:0px;}
+      span{color:#777;display:none;position:relative;top:-10px;}
+      footer{text-transform:uppercase;text-align: center;color:#888;/*border-top:1px solid #ccc;border-bottom:1px solid #ccc;*/width:268px;margin:10px auto;}
+      #show,#list{border:1px solid #ccc;background: #fff;padding:10px;width:88%;margin:0 auto;border-radius:4px;box-shadow:0px 0px 1px #ccc;}
+      #show a,#list a{color:#369;transition:0.5s;}
+      #show a:hover,#list a:hover{color:#ff3399;text-decoration: underline;}
+      #list{margin-top:10px;}
+      #list ul li{border-bottom: 1px dashed #ddd;}
+      @media (max-width:460px){
+        .box{width:100%;margin-top:60px;}
+        li{width:100px;margin-right:2px;}
+      }
+
+    </style>
+    <script>
+    $(function(){
+      $("li").hover(
+        function(){
+          $(this).children('span').fadeIn();
+        },
+        function(){
+          $(this).children('span').fadeOut();
+        }
+      );
+
+      $("#tg_show").click(function(e){
+          $("#show").slideToggle(500);
+          e.preventDefault();
+      })
+
+      $("#tg_list").click(function(e){
+          $("#list").slideToggle(500);
+          e.preventDefault();
+      })
+
+      $("#logo").click(function(e){
+          e.preventDefault();
+      })
+    })
+    </script>
   </head>
 
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/iRuxu">View on GitHub</a>
-
-          <h1 id="project_title">iRuxu</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+  
+   <div class="box">
+    <header><a href="javascript:void(0)" id="logo">IRUXU.COM</a></header>
+    <div class="main">
+      <ul class="clearfix">
+        <li><a title="github源码" href="https://github.com/iRuxu"></a><span>Github</span></li>
+        <li><a title="在线演示" href="" id="tg_show"></a><span>Tools</span></li>
+        <li><a title="随笔手札" href="" id="tg_list"></a><span>Articles</span></li>
+      </ul>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer" style="min-height:380px;">
-      <section id="main_content" class="inner">
-       +  A css notebook : <a href="http://iruxu.com/CSS-View/">CSS View</a>
-
-      </section>
+    <footer>iRuxu.com - All rights reserved.  <a href="http://weibo.com/yuanzi0512"><img src="img/sina.png" width="12px" alt="iruxu的微博" title="Follow me on 微博"></a> <a href="mailto:17229398@qq.com"><img src="img/email.png" width="12px" alt="iruxu的电子邮件" title="email:17229398@qq.com"></a></footer>
+    <div id="show" style="display:none">
+      <p>+  A css notebook : <a href="http://iruxu.com/CSS-View/">CSS View</a></p>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>iRuxu.com</p>
-      </footer>
+    <div id="list" style="display:none">
     </div>
-
+  </div>
     
-
   </body>
 </html>
