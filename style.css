@@ -161,6 +161,9 @@ footer {
   border-bottom: 1px dotted #ccc;
   border-radius: 0;
 }
+#show ul li:last-child {
+  border: none;
+}
 #show ul li a:before {
   content: counter(item) ".";
   display: inline;
