@@ -300,6 +300,7 @@ table td {
   border-bottom: 2px solid #111;
   line-height: 28px;
   margin-bottom: 10px;
+  position:relative;
 }
 .postTitle a {
   color: #111;
@@ -308,12 +309,17 @@ table td {
   color: #259;
 }
 /*文章meta*/
-.postDesc {
+#topics .postDesc {
   position:absolute;
   right:0;
   top:0;
   padding: 2px 5px;
   color:#666;
+  margin-bottom:0;
+}
+.postDesc{
+  position:static;
+  margin-bottom:40px;
 }
 .c_b_p_desc {
   color: #444;
