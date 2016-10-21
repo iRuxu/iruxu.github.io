@@ -1,0 +1,411 @@
+/*reset*/
+@charset "utf-8";
+
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body, header, footer, hgroup, menu, nav, section, article, aside, details, figcaption, figure, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, legend, button, input, textarea, form, th, td {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul, ol {
+  list-style: none outside none;
+}
+iframe {
+  border: 0 none;
+}
+img {
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  border: 0 none;
+}
+a {
+  text-decoration: none;
+}
+a:hover, a:active, :focus {
+  outline: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+  cursor: pointer;
+}
+strong {
+}
+address, cite, dfn, em, var, i {
+  font-style: normal;
+}
+code, kbd, pre, samp, tt {
+  font-family: consolas, 'Courier New', monospace, serif;
+}
+small {
+  font-size: 80%;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+button, input, select, textarea {
+  font: 12px/1.5 Consolas, 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+}
+
+/*custom*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body {
+  width: 100%;
+  line-height:1.8;
+  position: relative;
+  *zoom: 1;
+  background:#fff;
+  font-size: 13px;
+  color: #444;
+  font-family: Consolas, 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif;
+}
+a {
+  color: #259;
+}
+table td {
+  border: 1px solid #ddd;
+  padding: 2px 5px;
+}
+
+.c-header{
+  background-color:#222;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 1px rgba(0,0,0,.2);
+  position:fixed;
+  top:0;
+  left:0;
+  height:38px;
+  width:100%;
+  z-index:100;
+}
+.c-logo,.c-nav,.c-contact,.c-nav ul li{
+  float:left;
+  *display: inline;
+}
+.c-logo{
+  font-family: Trebuchet MS, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased;
+  font-size: 28px;
+  line-height: 38px;
+  text-shadow: 2px 2px 2px #000000;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  color: #eee;
+  width:158px;
+  padding-left:82px;
+  background: url('http://iruxu.com/notebook/image/iruxu.png') no-repeat 6px center;
+  background-size:auto 180%;
+}
+.c-logo:hover{
+  color:#00ccff;
+}
+.c-nav ul{
+  padding-left:1px;
+}
+.c-nav ul li {
+  height: 38px;
+  line-height: 38px;
+  cursor: pointer;
+  font-family: Trebuchet MS;
+  font-size: 14px;
+  text-align: center;
+  border-right: 1px solid #555;
+  border-left: 1px solid #555;
+  margin-left:-1px;
+}
+.c-nav ul li a {
+  background: #222;
+  padding: 0 20px;
+  display: block;
+  height: 100%;
+  color:#eee;
+}
+.c-nav ul li.on {
+  position: relative;
+  background: #353535;
+  border-left: 1px solid #00ccff;
+  border-right: 1px solid #00ccff;
+}
+.c-nav ul li:hover a,.c-nav ul li.on a{
+  color: #00ccff;
+  background: #333;
+}
+.c-contact{
+  position:absolute;
+  right:8px;
+  top:0;
+}
+.c-contact ul{
+  margin:9px 0;
+}
+.c-contact ul li{
+  float:left;
+  margin-left:10px;
+}
+.c-contact ul li a{
+  padding:0 6px;
+  display:block;
+  background-color:#fff;
+  border-radius:4px;
+  font-size:12px;
+  color:#222;
+}
+.c-contact ul li a i{
+  display:block;
+  float:left;
+  width: 16px;
+  height: 16px;
+  margin-right:6px;
+  background-repeat:no-repeat;
+  background-position:0 0 ;
+}
+.c-contact ul li a .u-weibo{
+  margin-top:1px;
+  background-size:auto 100%;
+  background-image:url("http://iruxu.com/img/sina.png");
+}
+.c-contact ul li a .u-email{
+  margin-top:5px;
+  background-size:100% auto;
+  background-image:url("http://iruxu.com/img/email.png");
+}
+.c-contact ul li a:hover{
+  background-color:#eee;
+}
+.c-footer{
+  background-color:#222;
+  color:#eee;
+}
+.c-footer .u-copy{
+  float:left;
+  color: #00ccff;
+  padding-left:10px;
+}
+.c-footer .u-link{
+  float:right;
+  padding-right:10px;
+}
+.c-footer .u-link a{
+  color:#eee;
+}
+.c-footer .u-link a:hover{
+  text-decoration:underline;
+}
+.c-footer .u-admin{
+  color:#00ccff !important;
+}
+
+/*default*/
+#header,#footer{display:none;}
+/*侧边栏*/
+#sideBar {
+  position:fixed;
+  left: 0;
+  top: 38px;
+  bottom:0;
+  width: 200px;
+  padding:20px;
+  background-color:#fafafa;
+  border-right:1px solid #eee;
+}
+.catListTitle {
+  border-bottom: 2px solid #333;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sidebar-block,.newsItem{
+  margin-bottom:20px;
+}
+#profile_block{
+  display:none;
+}
+/*文章主框架*/
+#mainContent {
+  background-color:#fff;
+  margin-left: 240px;
+  padding:58px 20px 20px 20px;
+}
+/*文章内容样式*/
+#mainContent img {
+  max-width: 90%;
+}
+#mainContent blockquote {
+  border: 1px solid #ccc;
+  border-left: 5px solid #ccc;
+  background: #fff;
+  padding: 0px 20px 10px 10px;
+  border-radius: 4px;
+  color: #666;
+  box-shadow: 0 0 2px #ddd inset;
+}
+#mainContent .cnblogs_Highlighter {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #ddd inset;
+}
+/*文章列表项目*/
+.day {
+  margin-bottom: 40px;
+  position:relative;
+}
+.dayTitle{
+  display:none;
+}
+.postTitle {
+  font-weight: bold;
+  font-family: 微软雅黑 !important;
+  border-bottom: 2px solid #111;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+.postTitle a {
+  color: #111;
+}
+.postTitle a:hover {
+  color: #259;
+}
+/*文章meta*/
+.postDesc {
+  position:absolute;
+  right:0;
+  top:0;
+  padding: 2px 5px;
+  color:#666;
+}
+.c_b_p_desc {
+  color: #444;
+  line-height:2.2;
+}
+/*查看全文按钮*/
+.c_b_p_desc_readmore {
+  float:right;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #333;
+  color: #ccc;
+  display: block;
+  margin: 10px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 !important;
+  border: 1px solid #111;
+  box-shadow: 0 0 4px #ddd;
+}
+.c_b_p_desc_readmore:hover {
+  color: #fff;
+  background-color: #222;
+}
+/*文章内页*/
+.post{
+  position:relative;
+}
+#cnblogs_post_body {
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
+/*签名*/
+#MySignature {
+  border: 1px dotted #ddd;
+  line-height:2;
+  padding: 10px 10px 10px 80px;
+  height: 60px;
+  background: url('http://ww3.sinaimg.cn/large/bcc700eegw1epnva48cllj201o01o742.jpg') #fafafa no-repeat 10px center;
+}
+/*分享*/
+#blog_post_info_block {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 10px;
+  color: #666;
+}
+#BlogPostCategory{
+  margin-bottom:0;
+}
+#green_channel {
+  border: none;
+  width: auto;
+  padding: 0 !important;
+  margin-top: 0;
+}
+#author_profile, #div_digg, #site_nav_under, #under_post_news, #under_post_kb, #ad_under_post_holder, #google_ad_c2, #HistoryToday, #ad_text_under_commentbox, #site_nav_under, #opt_under_post {
+  display: none;
+}
+/*评论*/
+.feedback_area_title,#commentform_title {
+  background: #222;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom:10px;
+  padding:0 20px;
+}
+.feedbackListSubtitle{
+  position:relative;
+}
+.feedbackManage{
+  position: absolute;
+  right:0;top:0;
+}
+.feedbackItem{
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 10px;
+  padding-bottom:10px;
+}
+.comment_vote{
+  display:none;
+}
+/*发布评论*/
+#comment_nav{
+  padding:10px 0;
+}
+.commentform textarea {
+  width: 100% !important;
+}
+/*广告*/
+.c_ad_block,#ad_t2,.ad_text_commentbox{display:none;}
