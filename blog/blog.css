@@ -103,6 +103,9 @@ body {
 a {
   color: #259;
 }
+a:hover {
+  color: #f39;
+}
 table td {
   border: 1px solid #ddd;
   padding: 2px 5px;
@@ -288,13 +291,12 @@ table td {
 }
 /*文章列表项目*/
 .day {
-  margin-bottom: 40px;
   position:relative;
 }
 .dayTitle{
   display:none;
 }
-.postTitle {
+.postTitle{
   font-weight: bold;
   font-family: 微软雅黑 !important;
   border-bottom: 2px solid #111;
@@ -309,17 +311,16 @@ table td {
   color: #259;
 }
 /*文章meta*/
-#topics .postDesc {
+#topics .postDesc{
   position:absolute;
   right:0;
   top:0;
   padding: 2px 5px;
-  color:#666;
   margin-bottom:0;
 }
 .postDesc{
-  position:static;
   margin-bottom:40px;
+  color:#666;
 }
 .c_b_p_desc {
   color: #444;
@@ -344,6 +345,31 @@ table td {
 .c_b_p_desc_readmore:hover {
   color: #fff;
   background-color: #222;
+}
+/*分类列表页*/
+.entrylistTitle{
+  background: #fafafa;
+  padding: 2px 10px;
+  margin-bottom: 20px;
+  border-left: 2px solid #222
+}
+.entrylistItem{
+  margin-bottom:40px;
+  position:relative;
+}
+.entrylistPosttitle{
+  font-weight: bold;
+  font-family: 微软雅黑 !important;
+  border-bottom: 2px solid #111;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+.entrylistItemPostDesc{
+  position:absolute;
+  right:0;
+  top:0;
+  padding: 2px 5px;
+  color:#666;
 }
 /*文章内页*/
 .post{
