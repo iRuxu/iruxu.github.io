@@ -1,0 +1,464 @@
+@import url('reset.less');
+@import url('base.less');
+//全局
+//============================
+body {
+    min-width: 375px;
+    width: 100%;
+    line-height: 1.8;
+    position: relative;
+    *zoom: 1;
+    background: #fff;
+    font-size: 13px;
+    color: #444;
+    font-family: Consolas, 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #259;
+}
+
+a:hover {
+    color: #f39;
+}
+
+table td {
+    border: 1px solid #ddd;
+    padding: 2px 5px;
+}
+
+//头部
+//============================
+.c-header {
+    background-color: #222;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 38px;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.c-logo,
+.c-nav,
+.c-contact,
+.c-nav ul li {
+    float: left;
+    *display: inline;
+}
+
+@keyframes starRotate{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+.c-logo {
+    font-family: Trebuchet MS, Helvetica, Arial;
+    -webkit-font-smoothing: antialiased;
+    font-size: 28px;
+    line-height: 38px;
+    text-shadow: 2px 2px 2px #000000;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    color: #eee;
+    .w(240px);.h(100%);
+    i{
+        .size(80px);
+        .dbi;.y(top);
+        background: url('http://iruxu.com/img/iruxu.png') no-repeat 0 0;
+        background-size: 100% 100%;
+        animation:starRotate 5s linear infinite;
+        position: relative;
+        top: -20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.c-logo:hover {
+    color: #00ccff;
+}
+
+#header,
+#footer {
+    display: none;
+}
+
+//导航
+//============================
+.c-nav ul {
+    padding-left: 1px;
+}
+
+.c-nav ul li {
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    text-align: center;
+    border-right: 1px solid #555;
+    border-left: 1px solid #555;
+    margin-left: -1px;
+}
+
+.c-nav ul li a {
+    background: #222;
+    padding: 0 20px;
+    display: block;
+    height: 100%;
+    color: #eee;
+}
+
+.c-nav ul li.on {
+    position: relative;
+    background: #353535;
+    border-left: 1px solid #00ccff;
+    border-right: 1px solid #00ccff;
+}
+
+.c-nav ul li:hover a,
+.c-nav ul li.on a {
+    color: #00ccff;
+    background: #333;
+}
+
+//联系
+//============================
+.c-contact {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.c-contact ul {
+    padding: 0 2px;
+}
+
+.c-contact ul li {
+    float: left;
+}
+
+.c-contact ul li a {
+    padding: 0 5px;
+    display: block;
+}
+
+//导航
+//============================
+.c-footer {
+    background-color: #222;
+    .color(#eee,#00ccff,#00ccff);
+    padding:2px;
+    .x;
+    .none;
+}
+
+.c-footer a:hover {
+    text-decoration: underline;
+}
+
+
+//侧边栏
+//============================
+#sideBar {
+    position: fixed;
+    left: 0;
+    top: 38px;
+    bottom: 0;
+    width: 200px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
+}
+
+.catListTitle {
+    border-bottom: 2px solid #333;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar-block,
+.newsItem {
+    margin-bottom: 20px;
+}
+
+#profile_block {
+    display: none;
+}
+
+//内容区框架
+//============================
+#mainContent {
+    background-color: #fff;
+    margin-left: 240px;
+    padding: 58px 20px 20px 20px;
+}
+
+//文章区
+//============================
+#mainContent img {
+    max-width: 90%;
+}
+
+#mainContent blockquote {
+    border: 1px solid #ccc;
+    border-left: 5px solid #ccc;
+    background: #fff;
+    padding: 0px 20px 10px 10px;
+    border-radius: 4px;
+    color: #666;
+    box-shadow: 0 0 2px #ddd inset;
+}
+
+#mainContent .cnblogs_Highlighter {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #ddd inset;
+}
+
+//文章列表
+//============================
+.day {
+    position: relative;
+}
+
+.dayTitle {
+    display: none;
+}
+
+.postTitle {
+    font-weight: bold;
+    font-family: 微软雅黑 !important;
+    border-bottom: 2px solid #111;
+    line-height: 28px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.postTitle a {
+    color: #111;
+}
+
+.postTitle a:hover {
+    color: #259;
+}
+#nav_next_page{
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 2px 10px;
+}
+
+#nav_next_page a {
+    
+}
+
+//文章meta
+//============================
+#topics .postDesc {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 5px;
+    margin-bottom: 0;
+}
+
+.postDesc {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.c_b_p_desc {
+    color: #444;
+    line-height: 2.2;
+}
+
+//查看全文
+//============================
+.c_b_p_desc_readmore {
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #333;
+    color: #ccc;
+    display: block;
+    margin: 10px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0 !important;
+    border: 1px solid #111;
+    box-shadow: 0 0 4px #ddd;
+}
+
+.c_b_p_desc_readmore:hover {
+    color: #fff;
+    background-color: #222;
+}
+
+//分类列表页（归档）
+//============================
+.entrylistTitle {
+    background: #fafafa;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+    border-left: 2px solid #222
+}
+
+.entrylistItem {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.entrylistPosttitle {
+    font-weight: bold;
+    font-family: 微软雅黑 !important;
+    border-bottom: 2px solid #111;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.entrylistItemPostDesc {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 5px;
+    color: #666;
+}
+
+//文章内页
+//============================
+.post {
+    position: relative;
+}
+
+#cnblogs_post_body {
+    line-height: 2;
+    letter-spacing: 0.5px;
+}
+
+/*签名*/
+
+#MySignature {
+    border: 1px dotted #ddd;
+    line-height: 2;
+    padding: 10px 10px 10px 80px;
+    height: 60px;
+    background: url('http://ww3.sinaimg.cn/large/bcc700eegw1epnva48cllj201o01o742.jpg') #fafafa no-repeat 10px center;
+}
+
+/*分享*/
+
+#blog_post_info_block {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    color: #666;
+}
+
+#BlogPostCategory {
+    margin-bottom: 0;
+}
+
+#green_channel {
+    border: none;
+    width: auto;
+    padding: 0 !important;
+    margin-top: 0;
+}
+
+#author_profile,
+#div_digg,
+#site_nav_under,
+#under_post_news,
+#under_post_kb,
+#ad_under_post_holder,
+#google_ad_c2,
+#HistoryToday,
+#ad_text_under_commentbox,
+#site_nav_under,
+#opt_under_post {
+    display: none;
+}
+
+//评论
+//============================
+/*评论列表*/
+
+.feedback_area_title,
+#commentform_title {
+    background: #222;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.feedbackListSubtitle {
+    position: relative;
+}
+
+.feedbackManage {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.feedbackItem {
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.comment_vote {
+    display: none;
+}
+
+/*发布评论*/
+
+#comment_nav {
+    padding: 10px 0;
+}
+
+.commentform textarea {
+    width: 100% !important;
+}
+
+//广告与其它
+//============================
+.c_ad_block,
+#ad_t2,
+.ad_text_commentbox {
+    display: none;
+}
+
+
+//移动端适配
+//============================
+@media screen and (max-width:768px){
+    
+    .c-nav{
+        .none;
+    }
+
+    .c-footer{
+        .db;
+    }
+
+    #main{
+        padding:0 !important;
+    }
+    #sideBar{
+        .ps;
+    }
+ }

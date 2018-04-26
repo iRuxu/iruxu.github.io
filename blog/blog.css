@@ -1,101 +1,323 @@
-/*reset*/
 @charset "utf-8";
-
+/*
+ * Reset.less
+ * Version: 1.3 
+ * Author: iRuxu
+ * Creat: 2014/08
+ * Update: 2018/03/22
+ * Description: reset browser style
+ * Manual: http://csslab.cc
+ * Reference: github.com/necolas/normalize.css
+ */
+/*-------------------------------------
+├   Document                           ┆
+└------------------------------------*/
 html {
   -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-body, header, footer, hgroup, menu, nav, section, article, aside, details, figcaption, figure, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, legend, button, input, textarea, form, th, td {
+/*-------------------------------------
+├   Sections                           ┆
+└------------------------------------*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+th,
+td {
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+menu,
+section,
+summary {
   display: block;
 }
-audio, canvas, video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
-blockquote, q {
+iframe {
+  border: none;
+}
+blockquote,
+q {
   quotes: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-ul, ol {
-  list-style: none outside none;
+ul,
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-iframe {
-  border: 0 none;
+dl,
+dd,
+dt {
+  margin: 0;
+  padding: 0;
+}
+/*-------------------------------------
+├   Embedded content                   ┆
+└------------------------------------*/
+audio,
+video,
+canvas {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 img {
-  vertical-align: middle;
+  border: none;
   -ms-interpolation-mode: bicubic;
-  border: 0 none;
+  max-width: 100%;
 }
+svg:not(:root) {
+  overflow: hidden;
+}
+template {
+  display: none;
+}
+/*-------------------------------------
+├   Text                           	   ┆
+└------------------------------------*/
 a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
 }
-a:hover, a:active, :focus {
-  outline: 0;
+a:active,
+a:hover {
+  outline-width: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal;
-  cursor: pointer;
 }
+b,
 strong {
+  font-weight: normal;
 }
-address, cite, dfn, em, var, i {
+i,
+em {
   font-style: normal;
 }
-code, kbd, pre, samp, tt {
-  font-family: consolas, 'Courier New', monospace, serif;
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
 }
 small {
   font-size: 80%;
 }
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-sup {
-  top: -0.5em;
-}
 sub {
   bottom: -0.25em;
 }
-button, input, select, textarea {
-  font: 12px/1.5 Consolas, 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+sup {
+  top: -0.5em;
 }
-
-/*custom*/
-.clearfix {
-  *zoom: 1;
+/*-------------------------------------
+├   Forms                  			   ┆
+└------------------------------------*/
+input,
+button,
+select,
+textarea {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
 }
-.clearfix:after {
-  content: "\200B";
-  display: block;
-  height: 0;
-  clear: both;
+button {
+  box-sizing: content-box;
+  *line-height: normal;
 }
+select {
+  padding-right: 0 !important;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  display: table;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  color: inherit;
+  padding: 0;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+[hidden] {
+  display: none;
+}
+/*
+ * Base.less
+ * Version: 3.4
+ * Author: iRuxu
+ * Creat: 2014/08
+ * Update: 2018/04/14
+ * Description: Base function,ie hack,quick layout
+ * Manual: http://csslab.cc
+ */
+/*-------------------------------------
+    ├   Font                              ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   对齐                              ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Text                              ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Size                              ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Display                            ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Layout                             ┆
+    └------------------------------------*/
+/*浮动阵列
+    --------------------------------------------------------
+    1.结构演示：$outer > $inner > $item
+    2.函数应用：$outer
+    3.参数说明：
+        @outer:外层包裹class名,例videobox
+        @inner:内层包裹class名,例videolist
+        @item:循环单元class命,例videoitem
+        @item-spacing:列表项间距
+    --------------------------------------------------------*/
+/*-------------------------------------
+    ├   Position                           ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Image                              ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Effect                             ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Transform                          ┆
+    └------------------------------------*/
+/*-------------------------------------
+    ├   Other                              ┆
+    └------------------------------------*/
 body {
+  min-width: 375px;
   width: 100%;
-  line-height:1.8;
+  line-height: 1.8;
   position: relative;
   *zoom: 1;
-  background:#fff;
+  background: #fff;
   font-size: 13px;
   color: #444;
   font-family: Consolas, 'Trebuchet MS', Verdana, Helvetica, Arial, sans-serif;
@@ -110,23 +332,34 @@ table td {
   border: 1px solid #ddd;
   padding: 2px 5px;
 }
-
-.c-header{
-  background-color:#222;
+.c-header {
+  background-color: #222;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 1px rgba(0,0,0,.2);
-  position:fixed;
-  top:0;
-  left:0;
-  height:38px;
-  width:100%;
-  z-index:100;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 38px;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
 }
-.c-logo,.c-nav,.c-contact,.c-nav ul li{
-  float:left;
+.c-logo,
+.c-nav,
+.c-contact,
+.c-nav ul li {
+  float: left;
   *display: inline;
 }
-.c-logo{
+@keyframes starRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.c-logo {
   font-family: Trebuchet MS, Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   font-size: 28px;
@@ -135,16 +368,33 @@ table td {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   color: #eee;
-  width:158px;
-  padding-left:82px;
-  background: url('http://iruxu.com/notebook/image/iruxu.png') no-repeat 6px center;
-  background-size:auto 180%;
+  width: 240px;
+  height: 100%;
 }
-.c-logo:hover{
-  color:#00ccff;
+.c-logo i {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  background: url('http://iruxu.com/img/iruxu.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  animation: starRotate 5s linear infinite;
+  position: relative;
+  top: -20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.c-nav ul{
-  padding-left:1px;
+.c-logo:hover {
+  color: #00ccff;
+}
+#header,
+#footer {
+  display: none;
+}
+.c-nav ul {
+  padding-left: 1px;
 }
 .c-nav ul li {
   height: 38px;
@@ -155,14 +405,14 @@ table td {
   text-align: center;
   border-right: 1px solid #555;
   border-left: 1px solid #555;
-  margin-left:-1px;
+  margin-left: -1px;
 }
 .c-nav ul li a {
   background: #222;
   padding: 0 20px;
   display: block;
   height: 100%;
-  color:#eee;
+  color: #eee;
 }
 .c-nav ul li.on {
   position: relative;
@@ -170,60 +420,54 @@ table td {
   border-left: 1px solid #00ccff;
   border-right: 1px solid #00ccff;
 }
-.c-nav ul li:hover a,.c-nav ul li.on a{
+.c-nav ul li:hover a,
+.c-nav ul li.on a {
   color: #00ccff;
   background: #333;
 }
-.c-contact{
-  position:absolute;
-  right:8px;
-  top:6px;
-background-color:#fff;
-border-radius:4px;
+.c-contact {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  background-color: #fff;
+  border-radius: 4px;
 }
-.c-contact ul{padding:0 2px;}
-.c-contact ul li{
-  float:left;
+.c-contact ul {
+  padding: 0 2px;
 }
-.c-contact ul li a{
-  padding:0 5px;
-  display:block;
+.c-contact ul li {
+  float: left;
 }
-.c-footer{
-  background-color:#222;
-  color:#eee;
+.c-contact ul li a {
+  padding: 0 5px;
+  display: block;
 }
-.c-footer .u-copy{
-  float:left;
+.c-footer {
+  background-color: #222;
+  color: #eee;
+  padding: 2px;
+  text-align: center;
+  display: none;
+}
+.c-footer a {
   color: #00ccff;
-  padding-left:10px;
 }
-.c-footer .u-link{
-  float:right;
-  padding-right:10px;
+.c-footer a:hover {
+  color: #00ccff;
 }
-.c-footer .u-link a{
-  color:#eee;
+.c-footer a:hover {
+  text-decoration: underline;
 }
-.c-footer .u-link a:hover{
-  text-decoration:underline;
-}
-.c-footer .u-admin{
-  color:#00ccff !important;
-}
-
-/*default*/
-#header,#footer{display:none;}
-/*侧边栏*/
 #sideBar {
-  position:fixed;
+  position: fixed;
   left: 0;
   top: 38px;
-  bottom:0;
+  bottom: 0;
   width: 200px;
-  padding:20px;
-  background-color:#fafafa;
-  border-right:1px solid #eee;
+  padding: 20px;
+  background-color: #fafafa;
+  border-right: 1px solid #eee;
+  overflow-y: auto;
 }
 .catListTitle {
   border-bottom: 2px solid #333;
@@ -231,19 +475,18 @@ border-radius:4px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.sidebar-block,.newsItem{
-  margin-bottom:20px;
+.sidebar-block,
+.newsItem {
+  margin-bottom: 20px;
 }
-#profile_block{
-  display:none;
+#profile_block {
+  display: none;
 }
-/*文章主框架*/
 #mainContent {
-  background-color:#fff;
+  background-color: #fff;
   margin-left: 240px;
-  padding:58px 20px 20px 20px;
+  padding: 58px 20px 20px 20px;
 }
-/*文章内容样式*/
 #mainContent img {
   max-width: 90%;
 }
@@ -262,20 +505,19 @@ border-radius:4px;
   border-radius: 4px;
   box-shadow: 0 0 2px #ddd inset;
 }
-/*文章列表项目*/
 .day {
-  position:relative;
+  position: relative;
 }
-.dayTitle{
-  display:none;
+.dayTitle {
+  display: none;
 }
-.postTitle{
+.postTitle {
   font-weight: bold;
   font-family: 微软雅黑 !important;
   border-bottom: 2px solid #111;
   line-height: 28px;
   margin-bottom: 10px;
-  position:relative;
+  position: relative;
 }
 .postTitle a {
   color: #111;
@@ -283,25 +525,28 @@ border-radius:4px;
 .postTitle a:hover {
   color: #259;
 }
-/*文章meta*/
-#topics .postDesc{
-  position:absolute;
-  right:0;
-  top:0;
-  padding: 2px 5px;
-  margin-bottom:0;
+#nav_next_page {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 2px 10px;
 }
-.postDesc{
-  margin-bottom:40px;
-  color:#666;
+#topics .postDesc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2px 5px;
+  margin-bottom: 0;
+}
+.postDesc {
+  margin-bottom: 40px;
+  color: #666;
 }
 .c_b_p_desc {
   color: #444;
-  line-height:2.2;
+  line-height: 2.2;
 }
-/*查看全文按钮*/
 .c_b_p_desc_readmore {
-  float:right;
+  float: right;
   width: 100px;
   height: 30px;
   line-height: 30px;
@@ -319,34 +564,32 @@ border-radius:4px;
   color: #fff;
   background-color: #222;
 }
-/*分类列表页*/
-.entrylistTitle{
+.entrylistTitle {
   background: #fafafa;
   padding: 2px 10px;
   margin-bottom: 20px;
-  border-left: 2px solid #222
+  border-left: 2px solid #222;
 }
-.entrylistItem{
-  margin-bottom:40px;
-  position:relative;
+.entrylistItem {
+  margin-bottom: 40px;
+  position: relative;
 }
-.entrylistPosttitle{
+.entrylistPosttitle {
   font-weight: bold;
   font-family: 微软雅黑 !important;
   border-bottom: 2px solid #111;
   line-height: 28px;
   margin-bottom: 10px;
 }
-.entrylistItemPostDesc{
-  position:absolute;
-  right:0;
-  top:0;
+.entrylistItemPostDesc {
+  position: absolute;
+  right: 0;
+  top: 0;
   padding: 2px 5px;
-  color:#666;
+  color: #666;
 }
-/*文章内页*/
-.post{
-  position:relative;
+.post {
+  position: relative;
 }
 #cnblogs_post_body {
   line-height: 2;
@@ -355,7 +598,7 @@ border-radius:4px;
 /*签名*/
 #MySignature {
   border: 1px dotted #ddd;
-  line-height:2;
+  line-height: 2;
   padding: 10px 10px 10px 80px;
   height: 60px;
   background: url('http://ww3.sinaimg.cn/large/bcc700eegw1epnva48cllj201o01o742.jpg') #fafafa no-repeat 10px center;
@@ -368,8 +611,8 @@ border-radius:4px;
   padding: 10px;
   color: #666;
 }
-#BlogPostCategory{
-  margin-bottom:0;
+#BlogPostCategory {
+  margin-bottom: 0;
 }
 #green_channel {
   border: none;
@@ -377,40 +620,69 @@ border-radius:4px;
   padding: 0 !important;
   margin-top: 0;
 }
-#author_profile, #div_digg, #site_nav_under, #under_post_news, #under_post_kb, #ad_under_post_holder, #google_ad_c2, #HistoryToday, #ad_text_under_commentbox, #site_nav_under, #opt_under_post {
+#author_profile,
+#div_digg,
+#site_nav_under,
+#under_post_news,
+#under_post_kb,
+#ad_under_post_holder,
+#google_ad_c2,
+#HistoryToday,
+#ad_text_under_commentbox,
+#site_nav_under,
+#opt_under_post {
   display: none;
 }
-/*评论*/
-.feedback_area_title,#commentform_title {
+/*评论列表*/
+.feedback_area_title,
+#commentform_title {
   background: #222;
   border: 1px solid #ccc;
   color: #ccc;
   font-size: 14px;
   line-height: 28px;
-  margin-bottom:10px;
-  padding:0 20px;
+  margin-bottom: 10px;
+  padding: 0 20px;
 }
-.feedbackListSubtitle{
-  position:relative;
+.feedbackListSubtitle {
+  position: relative;
 }
-.feedbackManage{
+.feedbackManage {
   position: absolute;
-  right:0;top:0;
+  right: 0;
+  top: 0;
 }
-.feedbackItem{
+.feedbackItem {
   border-bottom: 1px dashed #ddd;
   margin-bottom: 10px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
-.comment_vote{
-  display:none;
+.comment_vote {
+  display: none;
 }
 /*发布评论*/
-#comment_nav{
-  padding:10px 0;
+#comment_nav {
+  padding: 10px 0;
 }
 .commentform textarea {
   width: 100% !important;
 }
-/*广告*/
-.c_ad_block,#ad_t2,.ad_text_commentbox{display:none;}
+.c_ad_block,
+#ad_t2,
+.ad_text_commentbox {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .c-nav {
+    display: none;
+  }
+  .c-footer {
+    display: block;
+  }
+  #main {
+    padding: 0 !important;
+  }
+  #sideBar {
+    position: static;
+  }
+}
