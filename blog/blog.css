@@ -177,43 +177,17 @@ table td {
 .c-contact{
   position:absolute;
   right:8px;
-  top:0;
+  top:6px;
+background-color:#fff;
+border-radius:4px;
 }
-.c-contact ul{
-  margin:9px 0;
-}
+.c-contact ul{padding:0 2px;}
 .c-contact ul li{
   float:left;
-  margin-left:10px;
 }
 .c-contact ul li a{
-  padding:0 6px;
+  padding:0 5px;
   display:block;
-  background-color:#fff;
-  font-size:12px;
-  color:#222;
-}
-.c-contact ul li a i{
-  display:block;
-  float:left;
-  width: 16px;
-  height: 16px;
-  margin-right:6px;
-  background-repeat:no-repeat;
-  background-position:0 0 ;
-}
-.c-contact ul li a .u-weibo{
-  margin-top:1px;
-  background-size:auto 100%;
-  background-image:url("http://iruxu.com/img/sina.png");
-}
-.c-contact ul li a .u-email{
-  margin-top:5px;
-  background-size:100% auto;
-  background-image:url("http://iruxu.com/img/email.png");
-}
-.c-contact ul li a:hover{
-  background-color:#eee;
 }
 .c-footer{
   background-color:#222;
