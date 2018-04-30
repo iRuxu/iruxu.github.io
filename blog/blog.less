@@ -184,12 +184,35 @@ table td {
 #profile_block {
     display: none;
 }
-.catListPostCategory ul li a,.catListTag ul li a{
-    margin-right:5px;
-    &:before{
-        content:'+';
-        padding:0 5px;
-        color:#999;
+.catListPostCategory,.catListTag{
+    ul li a{
+        margin-right:5px;
+        &:before{
+            content:'+';
+            padding:0 5px;
+            color:#999;
+            transition:0.2s ease-in-out;
+            .dbi;.y;
+        }
+    }
+    ul li a:hover{
+        &:before{
+            transform:rotate(180deg);
+        }
+    }
+}
+.catList{
+    ul li a{
+        &:before{
+            content:'ღ.';
+            color:#999;
+            margin-right:2px;
+        }
+    }
+    ul li a:hover{
+        &:before{
+            color:#f39;
+        }
     }
 }
 

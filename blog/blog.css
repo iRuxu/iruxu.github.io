@@ -233,6 +233,23 @@ table td {
   content: '+';
   padding: 0 5px;
   color: #999;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.catListPostCategory ul li a:hover:before,
+.catListTag ul li a:hover:before {
+  transform: rotate(180deg);
+}
+.catList ul li a:before {
+  content: 'ღ.';
+  color: #999;
+  margin-right: 2px;
+}
+.catList ul li a:hover:before {
+  color: #f39;
 }
 #mainContent {
   background-color: #fff;
