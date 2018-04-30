@@ -333,6 +333,16 @@ h3.myposts_title {
   margin: 10px auto;
   border-left: 5px solid #eee;
 }
+.postDesc a {
+  background-color: #62CFFC;
+  border-radius: 3px 3px 3px 3px;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 1px 3px 2px;
+}
+.postDesc a:hover {
+  background-color: #46A546;
+}
 #blog_post_info_block {
   *zoom: 1;
   background: #fafafa;
