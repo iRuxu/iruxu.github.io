@@ -263,6 +263,16 @@ table td {
 .day .postDesc {
   color: #666;
 }
+.day .postDesc a {
+  background-color: #62CFFC;
+  border-radius: 3px 3px 3px 3px;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 1px 3px 2px;
+}
+.day .postDesc a:hover {
+  background-color: #f39;
+}
 .dayTitle {
   display: none;
 }
@@ -350,15 +360,18 @@ h3.myposts_title {
   margin: 10px auto;
   border-left: 5px solid #eee;
 }
-.postDesc a {
-  background-color: #62CFFC;
-  border-radius: 3px 3px 3px 3px;
-  color: #FFFFFF;
-  font-weight: bold;
-  padding: 1px 3px 2px;
+#topics .postDesc a:nth-child(5) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #222;
+  line-height: 28px;
+  padding: 0 20px;
+  color: #eee;
+  border-radius: 3px;
 }
-.postDesc a:hover {
-  background-color: #46A546;
+#topics .postDesc a:nth-child(5):hover {
+  color: #0cf;
 }
 #blog_post_info_block {
   *zoom: 1;

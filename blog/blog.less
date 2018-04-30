@@ -236,7 +236,17 @@ table td {
     position: relative;
     margin-bottom: 40px;
 
-    .postDesc{color:#666;}
+    .postDesc{
+        color:#666;
+        a{
+            background-color: #62CFFC;
+            border-radius: 3px 3px 3px 3px;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 1px 3px 2px;
+            &:hover{background-color: #f39;}
+        }
+    }
 }
 
 .dayTitle {
@@ -342,15 +352,18 @@ table td {
     background: #fafafa;
     margin: 10px auto;
     border-left: 5px solid #eee;
-}
 
-.postDesc a{
-    background-color: #62CFFC;
-    border-radius: 3px 3px 3px 3px;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding: 1px 3px 2px;
-    &:hover{background-color: #46A546;}
+    a:nth-child(5){
+        .pa;.rt(0,0);
+        background: #222;
+        line-height: 28px;
+        padding: 0 20px;
+        color: #eee;
+        border-radius: 3px;
+        &:hover{
+            color:#0cf;
+        }
+    }
 }
 
 
