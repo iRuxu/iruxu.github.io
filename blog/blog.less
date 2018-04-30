@@ -1,8 +1,9 @@
-@import url('reset.less');
 @import url('base.less');
+
 //全局
 //============================
 body {
+    margin:0;
     min-width: 375px;
     width: 100%;
     line-height: 1.8;
@@ -16,10 +17,16 @@ body {
 
 a {
     color: #259;
+    text-decoration:none;
 }
 
 a:hover {
     color: #f39;
+}
+
+ul,li{
+    list-style:none;
+    padding:0;margin:0;
 }
 
 table td {
@@ -89,40 +96,25 @@ table td {
 //导航
 //============================
 .c-nav ul {
-    padding-left: 1px;
-}
-
-.c-nav ul li {
-    height: 38px;
-    line-height: 38px;
-    cursor: pointer;
-    font-family: Trebuchet MS;
-    font-size: 14px;
-    text-align: center;
-    border-right: 1px solid #555;
-    border-left: 1px solid #555;
-    margin-left: -1px;
+    .clearfix;
 }
 
 .c-nav ul li a {
-    background: #222;
+    .fz(14px,38px);
+    .x;
+    font-family: Trebuchet MS;
     padding: 0 20px;
     display: block;
-    height: 100%;
     color: #eee;
+    &:hover{
+        color: #00ccff;
+    }
+    .pr;
 }
 
-.c-nav ul li.on {
-    position: relative;
+.c-nav ul .on a {
+    color: #0cf;
     background: #353535;
-    border-left: 1px solid #00ccff;
-    border-right: 1px solid #00ccff;
-}
-
-.c-nav ul li:hover a,
-.c-nav ul li.on a {
-    color: #00ccff;
-    background: #333;
 }
 
 //联系
@@ -148,7 +140,7 @@ table td {
     display: block;
 }
 
-//导航
+//底部
 //============================
 .c-footer {
     background-color: #222;
@@ -192,8 +184,16 @@ table td {
 #profile_block {
     display: none;
 }
+.catListPostCategory ul li a,.catListTag ul li a{
+    margin-right:5px;
+    &:before{
+        content:'+';
+        padding:0 5px;
+        color:#999;
+    }
+}
 
-//内容区框架
+//内容区
 //============================
 #mainContent {
     background-color: #fff;
@@ -201,39 +201,25 @@ table td {
     padding: 58px 20px 20px 20px;
 }
 
-//文章区
-//============================
-#mainContent img {
-    max-width: 90%;
-}
-
-#mainContent blockquote {
-    border: 1px solid #ccc;
-    border-left: 5px solid #ccc;
-    background: #fff;
-    padding: 0px 20px 10px 10px;
-    border-radius: 4px;
-    color: #666;
-    box-shadow: 0 0 2px #ddd inset;
-}
-
-#mainContent .cnblogs_Highlighter {
-    border: 1px solid #ccc;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 2px #ddd inset;
-}
 
 //文章列表
 //============================
+//列表容器
+.forFlow{
+
+}
+//单条
 .day {
     position: relative;
+    margin-bottom: 40px;
+
+    .postDesc{color:#666;}
 }
 
 .dayTitle {
     display: none;
 }
-
+//标题
 .postTitle {
     font-weight: bold;
     font-family: 微软雅黑 !important;
@@ -243,45 +229,12 @@ table td {
     position: relative;
 }
 
-.postTitle a {
-    color: #111;
-}
-
-.postTitle a:hover {
-    color: #259;
-}
-#nav_next_page{
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 2px 10px;
-}
-
-#nav_next_page a {
-    
-}
-
-//文章meta
-//============================
-#topics .postDesc {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 2px 5px;
-    margin-bottom: 0;
-}
-
-.postDesc {
-    margin-bottom: 40px;
-    color: #666;
-}
-
 .c_b_p_desc {
     color: #444;
     line-height: 2.2;
 }
 
 //查看全文
-//============================
 .c_b_p_desc_readmore {
     float: right;
     width: 100px;
@@ -302,14 +255,27 @@ table td {
     color: #fff;
     background-color: #222;
 }
+//下一页
+#nav_next_page{
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 2px 10px;
+    .bold;
 
-//分类列表页（归档）
+    a:after{
+        content:">>";
+        padding-left:3px;
+    }
+}
+
+//分类列表页
 //============================
-.entrylistTitle {
+.entrylistTitle,h3.myposts_title {
     background: #fafafa;
     padding: 2px 10px;
     margin-bottom: 20px;
-    border-left: 2px solid #222
+    border-left: 2px solid #222;
+    margin-top:0;
 }
 
 .entrylistItem {
@@ -333,48 +299,58 @@ table td {
     color: #666;
 }
 
-//文章内页
+//文章单页
 //============================
 .post {
     position: relative;
 }
 
-#cnblogs_post_body {
-    line-height: 2;
-    letter-spacing: 0.5px;
+.postTitle{
+    margin-top:0;
+    a {
+        color:#222;
+        .fz(18px,2);
+    };
 }
 
-/*签名*/
-
-#MySignature {
-    border: 1px dotted #ddd;
-    line-height: 2;
-    padding: 10px 10px 10px 80px;
-    height: 60px;
-    background: url('http://ww3.sinaimg.cn/large/bcc700eegw1epnva48cllj201o01o742.jpg') #fafafa no-repeat 10px center;
+//meta
+#topics .postDesc {
+    padding: 5px 5px 5px 10px;
+    background: #fafafa;
+    margin: 10px auto;
+    border-left: 5px solid #eee;
 }
 
-/*分享*/
 
+//归类+收藏等包裹层
 #blog_post_info_block {
+    .clearfix;
     background: #fafafa;
     border: 1px solid #eee;
     border-radius: 4px;
     padding: 10px;
     color: #666;
 }
-
+//归属
 #BlogPostCategory {
     margin-bottom: 0;
+    .di;
+}
+#EntryTag{
+    margin-left:5px;
+    .di;
 }
 
+//分享
+#blog_post_info{
+    .fr;
+}
 #green_channel {
     border: none;
     width: auto;
     padding: 0 !important;
     margin-top: 0;
 }
-
 #author_profile,
 #div_digg,
 #site_nav_under,
@@ -389,19 +365,69 @@ table td {
     display: none;
 }
 
+//文章内容
+//============================
+.blogpost-body{
+    line-height: 2;
+    letter-spacing: 0.2px;
+    color:#333;
+
+    a{
+        padding:0 2px;
+    }
+    p{
+        margin:0 !important;
+    }
+    img {
+        max-width: 90%;
+    }
+    blockquote {
+        border: 1px solid #ccc;
+        border-left: 5px solid #ccc;
+        background: #fff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: #666;
+        box-shadow: 0 0 2px #ddd inset;
+        margin: 10px auto;
+        font-family: Trebuchet MS;
+    }
+    //推荐版
+    .cnblogs_code{
+        span{
+            font-family: Consolas !important;
+        }
+    }
+    //第2个
+    .cnblogs_Highlighter {
+        border:1px solid #eee;
+        border-radius: 4px;
+        font-family: Consolas;
+        .syntaxhighlighter table td.gutter .line{
+            .lh(25px,25px) !important;
+        }
+        .syntaxhighlighter{
+            margin:0 !important;
+        }
+        .syntaxhighlighter code{
+            .lh(25px,25px) !important;
+        }
+    }
+}
+
+
 //评论
 //============================
 /*评论列表*/
-
 .feedback_area_title,
 #commentform_title {
     background: #222;
-    border: 1px solid #ccc;
     color: #ccc;
     font-size: 14px;
     line-height: 28px;
     margin-bottom: 10px;
-    padding: 0 20px;
+    padding: 0 10px;
+    .bold;
 }
 
 .feedbackListSubtitle {
@@ -425,7 +451,6 @@ table td {
 }
 
 /*发布评论*/
-
 #comment_nav {
     padding: 10px 0;
 }
@@ -445,7 +470,7 @@ table td {
 
 //移动端适配
 //============================
-@media screen and (max-width:768px){
+@media screen and (max-width:750px){
     
     .c-nav{
         .none;
@@ -461,4 +486,33 @@ table td {
     #sideBar{
         .ps;
     }
+
+    #topics .postDesc{
+        .ps;
+    }
+    .topicListFooter{
+        margin-right:0;
+    }
+    .commentform{
+        margin:0 !important;
+        padding:0 !important;
+    }
+    .catListPostCategory ul li,.catListTag ul li{
+        padding:3px 5px;
+        border-bottom:1px solid #eee;
+    }
+    #blog_post_info{
+        float:none;
+    }
  }
+
+
+//签名&文末自定义区域
+//===============================================
+#MySignature {
+    border: 1px dotted #ddd;
+    line-height: 2;
+    padding: 10px 10px 10px 80px;
+    height: 60px;
+    background: url('http://ww3.sinaimg.cn/large/bcc700eegw1epnva48cllj201o01o742.jpg') #fafafa no-repeat 10px center;
+}
