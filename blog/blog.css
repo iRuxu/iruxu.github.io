@@ -262,16 +262,14 @@ table td {
 }
 .day .postDesc {
   color: #666;
-}
-.day .postDesc a {
-  background-color: #62CFFC;
-  border-radius: 3px 3px 3px 3px;
-  color: #FFFFFF;
-  font-weight: bold;
-  padding: 1px 3px 2px;
-}
-.day .postDesc a:hover {
-  background-color: #f39;
+  /* a{
+            background-color: #62CFFC;
+            border-radius: 3px 3px 3px 3px;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 1px 3px 2px;
+            &:hover{background-color: #f39;}
+        } */
 }
 .dayTitle {
   display: none;
